@@ -34,3 +34,11 @@
   }
   }
 </ul>
+
+<!-- Structural directives -->
+<ul>
+  <li *ngFor="let item of items;let i=index" [id]="i">
+    <span *ngIf="i!==1;else index1">{{item}}</span>
+    <ng-template #index1>--------------</ng-template>
+  </li>
+</ul>

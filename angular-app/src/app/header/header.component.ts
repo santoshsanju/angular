@@ -1,9 +1,10 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output, computed, input, output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [ NgFor, NgIf ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
