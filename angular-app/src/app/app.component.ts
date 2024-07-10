@@ -13,4 +13,8 @@ export class AppComponent {
   title = 'angular-app';
 
   myParentTitle = "Parent App";
+
+  getChildTitle(title: string) {
+    this.title = title;
+  }
 }

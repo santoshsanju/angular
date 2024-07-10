@@ -1,4 +1,4 @@
-import { Component, Input, computed, input, signal } from '@angular/core';
+import { Component, EventEmitter, Input, Output, computed, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -26,6 +26,9 @@ export class HeaderComponent {
 
     // Set
     this.signalTitle.set("~~Angular~~");
+
+    // Output
+    this.childTitle.emit('Child App');
   }
 
   // Input
@@ -33,4 +36,7 @@ export class HeaderComponent {
 
   // Input Signal
   signalGetParentTitle = input.required<string>();
+
+  // Output
+  @Output() childTitle = new EventEmitter();
 }
