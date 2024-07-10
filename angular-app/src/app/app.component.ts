@@ -11,4 +11,6 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'angular-app';
+
+  myParentTitle = "Parent App";
 }
