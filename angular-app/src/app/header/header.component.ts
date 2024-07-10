@@ -1,10 +1,11 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output, computed, input, output, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ NgFor, NgIf ],
+  imports: [ NgFor, NgIf, FormsModule ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
