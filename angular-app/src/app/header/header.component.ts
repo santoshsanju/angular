@@ -10,4 +10,8 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   title = "My First App";
+
+  get extraTitle() {
+    return this.title + " Angular Basics";
+  }
 }
