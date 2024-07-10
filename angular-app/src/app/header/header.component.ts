@@ -14,4 +14,8 @@ export class HeaderComponent {
   get extraTitle() {
     return this.title + " Angular Basics";
   }
+
+  changeTitle() {
+    this.title = "~~Angular~~";
+  }
 }
