@@ -36,6 +36,7 @@ export class HeaderComponent {
 
     // Output Not a Signal
     this.signalChildTitle.emit('Child App');
+    localStorage.setItem("items", JSON.stringify(this.items));
   }
 
   // Input
@@ -56,6 +57,10 @@ export class HeaderComponent {
   // Form Submit
   onSubmit() {
     this.title = "changed to new";
+    const items = localStorage.getItem('items');
+    if (items) {
+      this.items = JSON.parse(items);
+    }
   }
 
   // Pipe
