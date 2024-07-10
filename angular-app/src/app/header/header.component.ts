@@ -1,7 +1,8 @@
 import { DatePipe, NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output, computed, input, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonComponent } from "../shared/common/common.component";
+import { CommonComponent } from "../shared/components/common.component";
+import { CommonService } from '../shared/service/common.service';
 
 @Component({
   selector: 'app-header',
@@ -59,4 +60,9 @@ export class HeaderComponent {
 
   // Pipe
   todaysDate = new Date();
+
+  // Service
+  constructor(private commonService: CommonService) {
+    this.title = this.commonService.serviceTitle;
+  }
 }
