@@ -50,4 +50,9 @@ export class HeaderComponent {
 
   // Control flow
   items = [ "Hi", "Hello", "How are you?" ];
+
+  // Form Submit
+  onSubmit() {
+    this.title = "changed to new";
+  }
 }

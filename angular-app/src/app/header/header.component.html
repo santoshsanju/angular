@@ -47,3 +47,9 @@
 
 <!-- Signal Two-way binding -->
 <input type="text" name="title" [(ngModel)]="signalTitle">
+
+<!-- Form submit -->
+<form action="" (ngSubmit)="onSubmit()">
+  <input type="text" name="title" [(ngModel)]="title">
+  <button type="submit">Submit</button>
+</form>
