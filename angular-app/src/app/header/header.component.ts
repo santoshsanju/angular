@@ -1,4 +1,4 @@
-import { Component, Input, computed, signal } from '@angular/core';
+import { Component, Input, computed, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -30,4 +30,7 @@ export class HeaderComponent {
 
   // Input
   @Input({ required: true }) getParentTitle!: string;
+
+  // Input Signal
+  signalGetParentTitle = input.required<string>();
 }
