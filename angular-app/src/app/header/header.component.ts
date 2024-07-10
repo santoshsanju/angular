@@ -45,4 +45,7 @@ export class HeaderComponent {
 
   // Output Not a Signal
   signalChildTitle = output<string>();
+
+  // Control flow
+  items = [ "Hi", "Hello", "How are you?" ];
 }

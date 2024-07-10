@@ -23,3 +23,14 @@
 
 <!-- Input Signal (Parent to child) -->
 <h1>{{signalGetParentTitle()}}</h1>
+
+<!-- Control flow -->
+<ul>
+  @for (item of items; track $index) {
+  @if($index!==1){
+  <li [id]="$index">{{item}}</li>
+  }@else {
+  <li>--------------</li>
+  }
+  }
+</ul>
