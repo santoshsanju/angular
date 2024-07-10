@@ -10,3 +10,10 @@
 
 <!-- Event binding -->
 <button (click)="changeTitle()">Change</button>
+
+<!-- Signal -->
+<h1>{{signalTitle()}}</h1>
+
+<h1 [textContent]="signalTitle()"></h1>
+
+<h1>{{signalGetTitle()}}</h1>

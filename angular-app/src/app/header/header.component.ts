@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,11 +11,20 @@ export class HeaderComponent {
 
   title = "My First App";
 
+  // Signals
+  signalTitle = signal("My First App");
+
   get extraTitle() {
     return this.title + " Angular Basics";
   }
 
+  // Computed
+  signalGetTitle = computed(() => this.signalTitle() + " Angular Basics");
+
   changeTitle() {
     this.title = "~~Angular~~";
+
+    // Set
+    this.signalTitle.set("~~Angular~~");
   }
 }
